@@ -1,0 +1,14 @@
+# Python cache
+__pycache__/
+
+# Virtual environment
+venv/
+.venv
+env/
+
+# Test artifacts
+.pytest_cache/
+report.html
+
+# Environment variables
+.env

@@ -1,6 +1,6 @@
-# TODO List API Testing
+# TODO API Testing
 
-This project demonstrates an API testing setup against the `/todos` endpoint in the public JSONPlaceholder API.
+API testing setup against the `/todos` endpoint in the public JSONPlaceholder API.
 
 ## Project Structure
 
@@ -15,39 +15,29 @@ This project demonstrates an API testing setup against the `/todos` endpoint in 
 └── README.md                 # Documentation
 ```
 
-## Quick Start
+## How to Run
 
-Install dependencies:
+**1. Install dependencies:**
 ```bash
 pip install -r Requirements.txt
 pip install brotli  # Optional: suppress urllib3 warnings
 ```
 
-Run the tests:
+**2. Run the tests:**
 ```bash
 pytest
 ```
 
-Generate an HTML report:
+**3. Generate an HTML report:**
 ```bash
 pytest --html=report.html --self-contained-html
-```
-
-## Configuration
-
-**Base URL**: Default is `https://jsonplaceholder.typicode.com`
-
-Override with an environment variable:
-```powershell
-# Windows (PowerShell)
-$env:BASE_URL = "https://my-api.example.com"; pytest
 ```
 
 ## What's Tested
 
 | Test | HTTP Method | Purpose |
 |------|------------|---------|
-| `test_list_todos_returns_list` | GET /todos | Fetch all todos; validate schema |
+| `test_list_todos_returns_list` | GET /todos | Fetch all todos |
 | `test_get_todo_by_id_has_expected_schema` | GET /todos/{id} | Fetch 3 todos (ids: 1,5,10); validate types |
 | `test_create_todo_returns_created_object` | POST /todos | Create new todo; check response has id |
 | `test_update_todo_put_overwrites_fields` | PUT /todos/{id} | Full replace of a todo |

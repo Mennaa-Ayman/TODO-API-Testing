@@ -37,9 +37,9 @@ pytest --html=report.html --self-contained-html
 
 | Test | HTTP Method | Purpose |
 |------|------------|---------|
-| `test_list_todos_returns_list` | GET /todos | Fetch all todos |
-| `test_get_todo_by_id_has_expected_schema` | GET /todos/{id} | Fetch 3 todos (ids: 1,5,10); validate types |
-| `test_create_todo_returns_created_object` | POST /todos | Create new todo; check response has id |
-| `test_update_todo_put_overwrites_fields` | PUT /todos/{id} | Full replace of a todo |
-| `test_partial_update_todo_patch_updates_subset` | PATCH /todos/{id} | Partial update (title only) |
-| `test_delete_todo_returns_success` | DELETE /todos/{id} | Delete a todo |
+| `test_get_all_todos` | GET /todos | Fetch all todos |
+| `test_get_todo_schema` | GET /todos/{id} | Fetch 3 todos (ids: 1,5,10); validate types |
+| `test_post_todo` | POST /todos | Create new todo; check response has id |
+| `test_put_todo` | PUT /todos/{id} | Full replace of a todo |
+| `test_patch_todo` | PATCH /todos/{id} | Partial update (title only) |
+| `test_delete_todo` | DELETE /todos/{id} | Delete a todo |
